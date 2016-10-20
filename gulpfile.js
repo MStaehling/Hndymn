@@ -17,12 +17,12 @@ gulp.task('wiredep', () => {
             ignorePath: /^(\.\.\/)+/
         }))
         .pipe(gulp.dest('app/styles'));
-    gulp.src('app/html/*.html')
+    gulp.src('*.html')
         .pipe(wiredep({
             exclude: ['bootstrap-sass'],
             ignorePath: /^(\.\.\/)*\.\./
         }))
-        .pipe(gulp.dest('app'));
+        .pipe(gulp.dest('.'));
 });
 
 gulp.task('default', function() {
@@ -51,12 +51,12 @@ gulp.task('styles', () => {
         //.pipe(reload({stream: true}));
 });
 gulp.watch('app/styles/*.scss', ['styles']);
-gulp.task('sass', function() {
-    return gulp.src('./app/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css/main.css'));
-});
+// gulp.task('sass', function() {
+//     return gulp.src('./app/**/*.scss')
+//         .pipe(sass().on('error', sass.logError))
+//         .pipe(gulp.dest('./css/main.css'));
+// });
 
-gulp.task('sass:watch', function() {
-    gulp.watch('./app/**/*.scss', ['sass']);
-});
+// gulp.task('sass:watch', function() {
+//     gulp.watch('./app/**/*.scss', ['sass']);
+// });
