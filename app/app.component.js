@@ -17,7 +17,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: '<h1>First App</h1>'
+        templateUrl: 'app/html/home.html'
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);
