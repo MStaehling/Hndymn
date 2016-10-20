@@ -1,0 +1,43 @@
+html {
+    // position: relative;
+    // min-height: 100%;
+}
+
+body {
+    // background: url(http://p1.pichost.me/i/40/1639383.jpg) no-repeat center center fixed;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
+    .container {
+        .header {
+            .nav {
+                display: inline-block;
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        color: black;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            // position: absolute;
+            margin-top: 50px;
+            // bottom: 0;
+            // width: 100%;
+            ul {
+                list-style: none;
+
+                li {
+                    display: inline-block;
+
+                    a {}
+                }
+            }
+        }
+    }
+}
