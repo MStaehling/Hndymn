@@ -15,6 +15,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "modernizr": "^3.3.1"
   }
 }
