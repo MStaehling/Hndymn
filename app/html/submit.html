@@ -1,0 +1,69 @@
+<form class="form-horizontal" ng-submit="list.submit()">
+  <div class="address">
+    <div class="form-group">
+      <label class="col-xs-3" for="stop">Stop</label>
+      <input class="col-xs-9" ng-model="list.newStop" name="stop" type="text" id="stop" placeholder="Enter name of stop" required>
+    </div>
+    <div class="form-group">
+      <label class="col-xs-3" for="street_address">Street Address</label>
+      <input class="col-xs-9" ng-model="list.streetAddress" name="street_address" type="text" id="street_address" required>
+    </div>
+    <div class="form-group">
+      <label class="col-xs-3" for="city">City</label>
+      <input class="col-xs-9" ng-model="list.city" name="city" type="text" id="city" required>
+    </div>
+    <div class="form-group">
+      <label class="col-xs-3" for="state">State</label>
+      <input class="col-xs-9" ng-model="list.state" name="state" type="text" id="state" required>
+    </div>
+    <div class="form-group">
+      <label class="col-xs-3" for="zip_code">Zip Code</label>
+      <input class="col-xs-9" ng-model="list.zipCode" name="zip_code" type="text" id="zip_code" required>
+    </div>
+  </div>
+  <!-- .address -->
+  <div class="select-questions">
+    <label for="camera">Are there any security cameras on site?</label>
+    <select class="form-control" ng-model="list.camera" id="camera" name="camera">
+      <option>yes</option>
+      <option>no</option>
+    </select>
+    <label for="guard">Do you have to go through a guard shack or security gate?</label>
+    <select class="form-control" ng-model="list.guard" id="guard" name="guard">
+      <option>yes</option>
+      <option>no</option>
+    </select>
+    <label for="security">Is there a security guard or police officer on site?</label>
+    <select class="form-control" ng-model="list.security" id="security" name="security">
+      <option>yes</option>
+      <option>no</option>
+    </select>
+    <br>
+    <label for="light">Is the stop well lit?</label>
+    <select class="form-control" ng-model="list.light" id="light" name="light">
+      <option>yes</option>
+      <option>no</option>
+    </select>
+    <br>
+    <label for="parking">Is there overnight parking available?</label>
+    <select class="form-control" ng-model="list.parking" id="parking" name="parking">
+      <option>yes</option>
+      <option>no</option>
+    </select>
+    <br>
+    <label for="hazards">Are there any hazards to be aware of such as low hanging branches or extremely slippery floors? Please explain.</label>
+    <textarea ng-model="list.hazards" style="width:100%" id="hazards" name="hazards"></textarea>
+  </div>
+  <!-- .select-questions -->
+  <div class="delivery">
+    <label for="delivery_instructions">Are there unique delivery instructions for this stop such as a limited delivery time window or information about a separate service entrance?</label>
+    <textarea ng-model="list.deliveryInstructions" style="width:100%" id="delivery_instructions" name="delivery_instructions"></textarea>
+  </div>
+  <!-- .delivery -->
+  <div class="info">
+    <label for="info">If there is any additional information that has not been mentioned, please include it here.</label>
+    <textarea ng-model="list.info" style="width:100%" id="info" name="info"></textarea>
+  </div>
+  <!-- .info -->
+  <input type="submit" id="submit" value="Submit" class="pull-right" />
+</form>

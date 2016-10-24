@@ -1,0 +1,5 @@
+<main>
+  <ul ng-repeat="(id, stops) in search.stop | toArray:true | filter:searchText">
+    <li><a href="#/stops/{{stops.$key}}">{{stops.stop}} {{stops.street}} {{stops.city}}, {{stops.state}} {{stops.zipCode}}</a></li>
+  </ul>
+</main>
