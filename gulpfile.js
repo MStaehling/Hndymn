@@ -6,6 +6,7 @@ var plumber = require('gulp-plumber');
 var concat = require('gulp-concat');
 var minify = require('gulp-minify-css');
 var merge = require('merge-stream');
+var browserSync = require('browser-sync');
 const autoprefixer = require('gulp-autoprefixer');
 const del = require('del');
 
@@ -101,7 +102,7 @@ gulp.task('serve', ['styles', 'fonts'], () => {
     notify: false,
     port: 9000,
     server: {
-      baseDir: ['app', '.tmp'],
+      baseDir: ['.', '.tmp'],
       routes: {
         '/bower_components': 'bower_components'
       },
