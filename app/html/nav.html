@@ -2,9 +2,10 @@
     <div class="header">
         <h1>Don't Truck Yourself</h1>
         <ul class="nav">
-            <li><a href="#/home">Home</a></li>
-            <li><a href="#/submit">Submit</a></li>
-            <li><a href="#/search">Search</a></li>
+            <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+            <li><a routerLink="/submit" routerLinkActive="active">Submit</a></li>
+            <li><a routerLink="/search" routerLinkActive="active">Search</a></li>
+            <!-- <a routerLink="/login" routerLinkActive="active">Login</a> -->
         </ul>
         <label class="pull-right">Search:
     <input ng-enter="myFunction()" href="#/search"  ng-model="searchText">
