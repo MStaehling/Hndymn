@@ -1,79 +1,83 @@
 <div class="address">
-  <h5>Stop</h5>
-  <h6>{{show.stop.stop}}</h6>
-  <h5>Street Address
-    <h5>
-      <h6>{{show.stop.street}}</h6>
-      <h5>City</h5>
-      <h6>{{show.stop.city}}</h6>
-      <h5>State</h5>
-      <h6>{{show.stop.state}}</h6>
-      <h5>Zip Code</h5>
-      <h6>{{show.stop.zipCode}}</h6>
+    <h5>Stop</h5>
+    <h6>{{show.stop.stop}}</h6>
+    <h5>Street Address</h5>
+    <h6>{{show.stop.street}}</h6>
+    <h5>City</h5>
+    <h6>{{show.stop.city}}</h6>
+    <h5>State</h5>
+    <h6>{{show.stop.state}}</h6>
+    <h5>Zip Code</h5>
+    <h6>{{show.stop.zipCode}}</h6>
 </div>
+
 <!-- .address -->
+
 <div class="select-questions">
-  <h5>Are there any security camera's on site?</h5>
-  <select id="camera" name="camera" ng-model="show.stop.camera">
+    <h5>Are there any security camera's on site?</h5>
+    <select id="camera" name="camera" ng-model="show.stop.camera">
     <option>yes</option>
     <option>no</option>
   </select>
-  <h5>Do you have to go through a guard shack or security gate?</h5>
-  <select id="guard" name="guard" ng-model="show.stop.guard">
+    <h5>Do you have to go through a guard shack or security gate?</h5>
+    <select id="guard" name="guard" ng-model="show.stop.guard">
     <option>yes</option>
     <option>no</option>
   </select>
-  <h5>Is there a security guard or police officer on site?</h5>
-  <select id="security" name="security" ng-model="show.stop.security">
+    <h5>Is there a security guard or police officer on site?</h5>
+    <select id="security" name="security" ng-model="show.stop.security">
     <option>yes</option>
     <option>no</option>
   </select>
-  <br>
-  <h5>Is the stop well lit?</h5>
-  <select id="light" name="light" ng-model="show.stop.light">
+    <br>
+    <h5>Is the stop well lit?</h5>
+    <select id="light" name="light" ng-model="show.stop.light">
     <option>yes</option>
     <option>no</option>
   </select>
-  <br>
-  <h5>Is there overnight parking available?</h5>
-  <select id="parking" name="parking" ng-model="show.stop.parking">
+    <br>
+    <h5>Is there overnight parking available?</h5>
+    <select id="parking" name="parking" ng-model="show.stop.parking">
     <option>yes</option>
     <option>no</option>
   </select>
-  <br>
-  <h5>Are there any hazards to be aware of such as low hanging branches or extremely slippery floors? Please explain.</h5>
-  <p>{{show.stop.hazards}}</p>
+    <br>
+    <h5>Are there any hazards to be aware of such as low hanging branches or extremely slippery floors? Please explain.</h5>
+    <p>{{show.stop.hazards}}</p>
 </div>
+
 <!-- .select-questions -->
+
 <div class="delivery">
-  <h5>Are there unique delivery instructions for this stop such as a limited delivery time window or information about a separate service entrance?</h5>
-  <p>{{show.stop.deliveryInstructions}}</p>
+    <h5>Are there unique delivery instructions for this stop such as a limited delivery time window or information about a separate service entrance?</h5>
+    <p>{{show.stop.deliveryInstructions}}</p>
 </div>
+
 <!-- .delivery -->
+
 <span>
   <strong>
     <small>*Double click on comments to edit</small>
   </strong>
 </span>
 <div class="comments row cmt view" ng-repeat="stops in show.stopComment" ng-class="{completed: stops.completed, editing: stops == show.editedComment}" class="ng-scope">
-
-  <div class="view">
-
-    <label ng-dblclick="show.editComment(stops.$id, stops)" class="ng-binding" ng-hide="show.edit==stops">{{stops.comment}}</label>
-
-    <label ng-show="show.edit==stops">
+    <div class="view">
+        <label ng-dblclick="show.editComment(stops.$id, stops)" class="ng-binding" ng-hide="show.edit==stops">{{stops.comment}}</label>
+        <label ng-show="show.edit==stops">
       <input type="text" ng-model="stops.comment" ng-change="show.stopComment.$save(stops)" class="col-sm-10" ng-keyup="show.editComments($index, comment, $event)" />
     </label>
-
-  </div>
-
+    </div>
 </div>
+
 <!-- .comments -->
+
 <form ng-submit="show.submit()">
-  <div class="info">
-    <h5 for="info">If there's any additional information that hasn't been mentioned please put it here.</h5>
-    <textarea ng-model="show.comment" style="width:100%" id="info" name="info"></textarea>
-  </div>
-  <!-- .info -->
-  <input type="submit" id="submit" value="Submit" class="pull-right" />
+    <div class="info">
+        <h5 for="info">If there's any additional information that hasn't been mentioned please put it here.</h5>
+        <textarea ng-model="show.comment" style="width:100%" id="info" name="info"></textarea>
+    </div>
+
+    <!-- .info -->
+
+    <input type="submit" id="submit" value="Submit" class="pull-right" />
 </form>

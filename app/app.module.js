@@ -11,6 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
+var home_component_1 = require("./home.component");
+var search_component_1 = require("./search.component");
+var submit_component_1 = require("./submit.component");
+var stops_component_1 = require("./stops.component");
 var router_1 = require("@angular/router");
 var AppModule = (function () {
     function AppModule() {
@@ -21,10 +25,13 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule,
             router_1.RouterModule.forRoot([
-                { path: 'hero/:id', component: app_component_1.AppComponent },
-                { path: '**', component: app_component_1.AppComponent }
+                { path: 'stops/:id', component: stops_component_1.StopsComponent },
+                { path: 'stops', component: stops_component_1.StopsComponent },
+                { path: 'submit', component: submit_component_1.SubmitComponent },
+                { path: 'search', component: search_component_1.SearchComponent },
+                { path: '**', component: home_component_1.HomeComponent }
             ])],
-        declarations: [app_component_1.AppComponent],
+        declarations: [app_component_1.AppComponent, stops_component_1.StopsComponent, search_component_1.SearchComponent, submit_component_1.SubmitComponent, home_component_1.HomeComponent],
         bootstrap: [app_component_1.AppComponent]
     }),
     __metadata("design:paramtypes", [])
